@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+        <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="5.1.0" />
+        <PackageReference Include="Xamarin.CommunityToolkit.Markup" Version="1.1.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Pages\" />
+        <Folder Include="ViewModels\" />
+        <Folder Include="Services\" />
+        <Folder Include="Pages\Base\" />
+        <Folder Include="ViewModels\Base\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\GitHubApiStatus.Extensions\GitHubApiStatus.Extensions.csproj" />
+    </ItemGroup>
+    <Import Project="..\GitStatus.Shared\GitStatus.Shared.projitems" Label="Shared" Condition="Exists('..\GitStatus.Shared\GitStatus.Shared.projitems')" />
+</Project>

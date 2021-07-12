@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>GitStatus.ConsoleApp</AssemblyName>
+    </PropertyGroup>
+    <Import Project="..\GitStatus.Shared\GitStatus.Shared.projitems" Label="Shared" Condition="Exists('..\GitStatus.Shared\GitStatus.Shared.projitems')" />
+    <ItemGroup>
+      <PackageReference Include="GitHubApiStatus" Version="2.0.1" />
+      <PackageReference Include="GitHubApiStatus.Extensions" Version="2.0.1" />
+    </ItemGroup>
+</Project>
